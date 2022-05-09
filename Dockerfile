@@ -14,7 +14,7 @@ RUN wget -q https://storage.googleapis.com/kubernetes-release/release/v${KUBE_VE
     && wget -q https://get.helm.sh/helm-v${HELM_VERSION}-${TARGETOS}-${TARGETARCH}.tar.gz -O - | tar -xzO ${TARGETOS}-${TARGETARCH}/helm > /usr/local/bin/helm \
     && rm -rf /var/cache/api/* \
     && chmod +x /usr/local/bin/helm /usr/local/bin/kubectl \
-    adduser -D $USER -u 1001 -g 1001
+    && adduser -D $USER -u 1001 -g 1001
 
 USER $USER
 WORKDIR $HOME
