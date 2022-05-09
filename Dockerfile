@@ -7,6 +7,7 @@ ARG TARGETOS=linux
 ARG TARGETARCH=amd64
 
 ENV HOME /home/$USER
+ENV PATH="$HOME/.local/bin:${PATH}"
 
 RUN apk add --no-cache --update ca-certificates bash git openssh curl gettext jq bind-tools python3 py3-pip
 
